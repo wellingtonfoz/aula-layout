@@ -5,15 +5,17 @@
         <div class="col-12 azul">
 
             <div class="card">
-                <div class="card-body">
+                <div class="card-body alinharDiretira">
             <h1>Cadastro de carros</h1><br>
-                            
+            <a href="admin/carros/new" class="btn btn-primary">Novo</a>
+ 
                 <table class="table">
                     
                     <thead>
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">NOME</th>
+                        <th scope="col">AÇÕES</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -21,6 +23,10 @@
                         <tr>
                             <td>{{carro.id}}</td>
                             <td>{{carro.nome}}</td>
+                            <td class="alinharDiretira"> 
+                                <a href="admin/carros/edit/{{carro.id}}" class="btn btn-primary">Editar</a>
+                                <button (click)="delete(carro)" class="btn btn-danger">Deletar</button>
+                             </td>
                         </tr>
                     }
                    
